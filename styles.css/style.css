@@ -24,12 +24,16 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
 ul {
     list-style: none;
 }
 a{
     text-decoration: none;
-    color: var(--color-darkGray);
+    color: var(--color-darkGray);  
+}
+a:hover{
+    color: var(--color-Violet);
 }
 .menu__photo-mobile {
     display: block;
@@ -38,6 +42,10 @@ a{
 
 .menu__photo-desktop {
     display: none;
+}
+h2 {
+    font-size: 32px;
+    font-weight: var(--weight-bold);
 }
 
 h3 {
@@ -48,7 +56,7 @@ h3 {
 }
 
 /*------ Section navbar --------------*/
-.navbar ul {
+.navbar ul{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -62,6 +70,7 @@ h3 {
     margin: 20px 20px;
     font-size: 30px;
     color: var(--color-yellowCream);
+    cursor: pointer;
 }
 
 /*------ Section menu --------------*/
@@ -79,7 +88,7 @@ h3 {
 }
 
 .menu__principal-title {
-    font-size: 1.5rem;
+    font-size: 50px;
     font-weight: var(--weight-bold);
 }
 
@@ -217,11 +226,11 @@ span {
     .menu__button-mobile{
         display: none;
     }
-    .menu__button-desktop{
-        display: block;
-    }
     .menu__photo-mobile{
         display: none;
+    }
+    .menu__button-desktop{
+        display: block;
     }
     .menu__photo-desktop{
         display: block;
@@ -229,6 +238,19 @@ span {
     .menu__container{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+    .menu__principal-title{
+        font-size: 5rem;
+        font-weight: var(--weight-bold);
+        text-align: start;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: var(--weight-bold)
+    }
+    p{
+        font-size: 24px;
+        font-weight: var(--weight-regular);
     }
     .titulo .menu__button{
         grid-column: 1/2;
@@ -296,20 +318,31 @@ span {
         margin-left: 8.5rem;
     }}
 
-
-
-
-
-
-
-
-
-
        /* si la Pantalla  es pequeña*/
 
-    @media (max-width:950px){
-        .navbar ul {
+    @media (max-width:950px) {
+        /* .navbar ul{
             display: none;
+        } */
+
+        .navbar ul{
+            background-color: var(--color-yellowCream);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            position: fixed;
+            top: 50px;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            top: 0;
+            transform: translateY(-110%)
+        }
+
+        .navbar__show-you{
+            transform: translateY(0)
         }
     }
 
