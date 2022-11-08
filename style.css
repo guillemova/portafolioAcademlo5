@@ -1,0 +1,389 @@
+/*------ Font --------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap');
+
+/*------ Var --------------*/
+
+:root {
+    --color-Violet: #8e7bef;
+    --color-darkGray: #222222;
+    --color-yellowCream: #fcda68;
+    --color-ligthgray: #423F40;
+    --color-white: #ffffff;
+    --color-lightWhite: #F9F5F2;
+    --weight-light: 300;
+    --weight-regular: 500;
+    --weight-bold: 800;
+    font-size: 18px;
+}
+
+/*------ Reset --------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-darkGray);
+}
+
+a:hover {
+    color: var(--color-Violet);
+}
+
+.menu__photo-mobile {
+    display: block;
+    padding: 2rem;
+}
+
+.menu__photo-desktop {
+    display: none;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: var(--weight-bold);
+}
+
+h3 {
+    color: var(--color-Violet);
+    font-weight: var(--weight-regular);
+    padding: 8px;
+    margin-left: 0.5rem;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+/*------ Section navbar --------------*/
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px 20px;
+    gap: 1rem;
+}
+
+.btn-burger {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 20px;
+    font-size: 30px;
+    color: var(--color-yellowCream);
+    cursor: pointer;
+}
+
+/*------ Section menu --------------*/
+.menu__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 4rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu__principal-title {
+    font-size: 50px;
+    font-weight: var(--weight-bold);
+}
+
+.menu__secondary-text {
+    color: var(--color-Violet);
+    font-weight: var(--weight-light);
+}
+
+.menu__social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social__list {
+    background-color: var(--color-Violet);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.menu__button-mobile {
+    display: block;
+    background-color: var(--color-Violet);
+    padding: 0.8rem;
+    width: 220px;
+    color: var(--color-lightWhite);
+    border: none;
+}
+
+.menu__button-desktop {
+    display: none;
+    background-color: var(--color-Violet);
+    padding: 0.8rem;
+    width: 280px;
+    color: var(--color-lightWhite);
+    border: none;
+}
+
+
+
+/*------ Section Skills and Experience --------------*/
+
+.skills {
+    background-color: var(--color-yellowCream);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+span {
+    font-weight: var(--weight-bold);
+}
+
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience {
+    margin-right: 290px;
+}
+
+.juntos {
+    display: flex;
+    gap: 2rem
+}
+
+.skills__year {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.skills__profesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 5rem;
+    padding: 20px;
+
+
+}
+
+
+/*------ Section Portfolio--------------*/
+.portfolio__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio__principal-title {
+    margin: 4rem 0 1rem 1rem;
+}
+
+.photo {
+    width: 100%;
+}
+
+/*------ Section Contact--------------*/
+.icons__principal-title {
+    text-align: center;
+    padding: 2rem;
+}
+
+.icons__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.cel__img,
+.email__img {
+    background-color: var(--color-lightWhite);
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.icons__email,
+.icons__cel {
+    line-height: 1.5rem;
+}
+
+/*------ Section Footer--------------*/
+
+.footer{
+    color: var(--color-Violet);
+    text-align: center;
+    padding: 50px; 
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+/*------ Media Query--------------*/
+@media (min-width:950px) {
+
+    /* menu */
+    .btn-burger {
+        display: none;
+    }
+
+    .menu__button-mobile {
+        display: none;
+    }
+
+    .menu__photo-mobile {
+        display: none;
+    }
+
+    .menu__button-desktop {
+        display: block;
+    }
+
+    .menu__photo-desktop {
+        display: block;
+    }
+
+    .menu__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu__principal-title {
+        font-size: 5rem;
+        font-weight: var(--weight-bold);
+        text-align: start;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: var(--weight-bold)
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: var(--weight-regular);
+    }
+
+    .titulo .menu__button {
+        grid-column: 1/2;
+    }
+
+    .menu__photo-desktop {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Skills and Experience */
+
+    .skills__container {
+        align-items: center;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .skills__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .skills__description img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hola {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Portfolio */
+    .portfolio__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem 3rem;
+    }
+
+    .portfolio__principal-title {
+        margin-left: 10rem;
+    }
+
+    /* Icons */
+    .icons__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icons__principal-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin-left: 8.5rem;
+    }
+}
+
+/* si la Pantalla  es pequeña*/
+
+@media (max-width:950px) {
+
+
+    .navbar ul {
+        background-color: var(--color-yellowCream);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        transform: translateX(-120%);
+        transition: transform 1s ease;
+    }
+
+    .navbar .navbar__show-you {
+        transform: translateX(-8%)
+    }
+}
