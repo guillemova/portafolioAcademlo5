@@ -232,6 +232,15 @@ span {
     line-height: 1.5rem;
 }
 
+/*------ Section Footer--------------*/
+
+.footer{
+    color: var(--color-Violet);
+    text-align: center;
+    padding: 50px; 
+    margin-top: 50px;
+    font-size: 1rem;
+}
 
 /*------ Media Query--------------*/
 @media (min-width:950px) {
@@ -371,10 +380,10 @@ span {
         width: 50%;
         height: 100vh;
         transform: translateX(-120%);
-        transition: 1s ease;
+        transition: transform 1s ease;
     }
 
-    .navbar__show-you {
-        transform: translateX(0%)
+    .navbar .navbar__show-you {
+        transform: translateX(-8%)
     }
 }
